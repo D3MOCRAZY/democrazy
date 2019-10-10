@@ -1,22 +1,51 @@
-.App {
-  text-align: center;
+
+/* GENERAL CSS */
+
+html,body{
+  font-size: 16px;
+  padding: 0.5rem;
+  background-color: #fff;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Page Structure CSS */
+#root{
+  height: 100%;
+}
+.App{
+  height: 100%;
+}
+.header{
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  height: 10%;
+}
+.main{
+  height: 80%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.footer{
+  height: 10%;
+}
+/* Elements inside the Header-class */
+
+.logo{
+  background-color:blue;
+}
+.menu{
+  background-color:blue;
 }
 
-.App-link {
-  color: #09d3ac;
+/* Elements inside the Main-class */
+.game-box{
+  position: relative;
+  width: 70%;
+  height: 80%;
+  border: 1px solid black;
+  border-radius: 2px;
+  text-align: center;
 }
