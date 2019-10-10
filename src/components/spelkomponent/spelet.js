@@ -10,7 +10,6 @@ export default class Game extends React.Component{
       return (
         <section className="game-box">
           implementera spelet här --->           components/spelet.js
-
         </section>
       )
     }
