@@ -8,6 +8,11 @@ html,body{
   height: 100%;
 }
 
+button{
+  border: 0;
+  padding: 0;
+  font-size: 100%;
+}
 
 /* Page Structure CSS */
 #root{
@@ -31,6 +36,7 @@ html,body{
 .footer{
   height: 10%;
 }
+
 /* Elements inside the Header-class */
 
 .logo{
@@ -45,7 +51,49 @@ html,body{
   position: relative;
   width: 70%;
   height: 80%;
-  border: 1px solid black;
+  border: 0.1rem solid #ccc;
   border-radius: 2px;
   text-align: center;
+}
+
+/* Elements inside the Game-box */
+.game-before-start{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.game-after-start{
+  height: 100%;
+  width: 100%;
+  display:block;
+}
+.startButton{
+  position:relative;
+  display:block;
+  width:  8rem;
+  background-color: rgba(35, 100, 117, 0.7);
+  border-radius: 0.1rem;
+  box-sizing: content-box;
+  transition: all 500ms ease;
+}
+
+/* STARTBUTTON EFFECT */
+@keyframes StrBtn {
+  0%{
+    padding: 0px;
+    border: 10px solid #eee;
+  }
+  100%{
+    padding: 20px;
+    border: 10px solid #ccc;
+  }
+}
+.startButton:hover{
+  animation: StrBtn 500ms forwards;
+}
+.startButton:active{
+  animation: StrBtn 1s forwards;
+  animation-direction: reverse;
 }
