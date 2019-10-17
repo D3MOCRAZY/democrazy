@@ -40,10 +40,13 @@ button{
 /* Elements inside the Header-class */
 
 .logo{
-  background-color:blue;
+  background-color:rgb(0, 225, 255);
 }
 .menu{
   background-color:blue;
+  font-size: 50px;
+
+
 }
 
 /* Elements inside the Main-class */
