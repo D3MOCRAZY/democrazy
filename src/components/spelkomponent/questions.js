@@ -1,4 +1,6 @@
 import React from 'react';
+import { GameConsumer } from '../../context/context.js';
+
 
 class Questions extends React.Component{
   constructor(props){
@@ -7,11 +9,17 @@ class Questions extends React.Component{
       question: props.question
     }
   }
+
+
   render(){
     return(
-      <>
-        <h2>{this.state.question.q}</h2>
-      </>
+      <GameConsumer>
+        {({ questions, iteration }) => (
+          <>
+            <h2>{ questions[iteration] }</h2>
+          </>
+        )}
+      </GameConsumer>
     )
   }
 }
