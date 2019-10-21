@@ -80,6 +80,7 @@ class GameProvider extends React.Component{
         let AmountInPercentage = Math.floor((amount * 100) / combinedVal);
         tempArr[index] = AmountInPercentage;
     });
+
     //Sorting out max value of percentage
     var max = 0;
     var maxIndex = 0;
@@ -91,11 +92,29 @@ class GameProvider extends React.Component{
         }
     }
 
+    //sorting out the index position
+    //that have the same value as above
+    // if percentage are alike eachother
+    // we want to show it
+    var sameVal = [];
+    for(let i = 0; i < tempArr.length; i++){
+        if(tempArr[i] === max && i !== maxIndex){
+          sameVal.push(i)
+        }
+    }
+
+    var chosenColors = this.state.partyColors[maxIndex];
+
+    if(sameVal.length > 0){
+      for(let i = 0; i < sameVal.length; i++){
+        chosenColors += ' och ' + this.state.partyColors[sameVal[i]];
+      }
+    }
     //ending game state on to off
     this.setState((state) => {
       return {
         gameOn: !state.gameOn,
-        userColorAffiliation: state.partyColors[maxIndex],
+        userColorAffiliation: chosenColors,
         userAnswersPercentage: tempArr
       }
     });
