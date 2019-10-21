@@ -110,7 +110,6 @@ button{
   border-radius: 2px;
   text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 .column-placeholder{
@@ -127,7 +126,7 @@ button{
 .col{
   width: 10%;
   margin: 10px;
-  
+
   transition: all 500ms;
 }
 
