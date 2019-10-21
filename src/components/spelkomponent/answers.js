@@ -1,20 +1,60 @@
 import React from 'react';
+import { GameConsumer } from '../../context/context.js';
 
-
-class Answers extends React.Component{
+class GetAnswers extends React.Component{
   constructor(props){
     super(props)
   }
   render(){
-    return(
-      <>
-        <button onClick={(e) => {this.props.answer(e)}}>Fråga 1</button>
-        <button>Fråga 2</button>
-        <button>Fråga 3</button>
-        <button>Fråga 4</button>
-      </>
-    )
+    if(this.props.gameOn){
+      return (
+        this.props.colors[this.props.iteration].map((cell, index) => {
+          return <button
+                    key={index + cell}
+                    index={cell}
+                    onClick={(e) => {this.props.updateAll(e)}}
+                    >
+                    {this.props.answers[index]}
+                  </button>
+        })
+      );
+    }
   }
 }
 
-export { Answers };
+
+class Answers extends React.Component{
+  constructor(props){
+    super(props);
+    this.checkStatus = this.checkStatus.bind(this);
+  }
+  checkStatus(gameOn){
+    if(gameOn === false){
+      return this.props.endGame();
+    }
+    return true
+  }
+  render(){
+    return(
+      <GameConsumer>
+        {({ answers, iteration, updateAll, gameOn, colors }) => (
+          <>
+            {this.checkStatus(gameOn) &&
+              <GetAnswers
+                iteration={iteration}
+                endGame={this.props.endGame}
+                colors={colors}
+                answers={answers}
+                gameOn={gameOn}
+                updateAll={updateAll}
+              >
+              </GetAnswers>
+              }
+          </>
+        )}
+      </GameConsumer>
+    )
+  }
+};
+
+export {Answers};

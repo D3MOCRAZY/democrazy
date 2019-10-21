@@ -11,8 +11,8 @@ function App() {
       <Headercomponent>
       </Headercomponent>
 
-      <Maincomponent>
-      </Maincomponent>
+        <Maincomponent>
+        </Maincomponent>
 
       <Footercomponent>
       </Footercomponent>
