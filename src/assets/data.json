@@ -21,7 +21,7 @@
       ["Studielån ska avskrivas för den som bosätter sig i glesbygd"],
       ["Ett bidragstak ska införas"]
   ],
-  "answers": ["instämmer helt", "instämmer delvis", "delvis emot", "helt emot", "ingen åsikt"],
+  "answers": ["Instämmer helt", "Instämmer delvis", "Delvis emot", "Helt emot", "Ingen åsikt"],
   "colors": [
       ["blå", "brun", "grön", "röd"],
       ["brun", "blå", "grön", "röd"],

@@ -43,7 +43,7 @@ export default class Game extends React.Component{
     render(){
       return (
       <GameProvider>
-          <section className={this.state.gameEnded ? 'result-box': 'game-box'}>
+          <section className={'game-after-start'}>
 
             {
 
@@ -66,8 +66,11 @@ export default class Game extends React.Component{
                           </>
 
                       :
-                      <button className="startButton" onClick={(e) => {this.startGame(e)}}>Start Game</button>
-                    }
+                      <section className="game-before-start-inner">
+                        <p className="intro-text">DemoCrazy</p>
+                        <button className="startButton" onClick={(e) => {this.startGame(e)}}>Start Game</button>
+                      </section>
+                  }
 
               <button className="startButton" onClick={(e) => {this.startGame(e)}}><span>:PLAY</span></button>
              
