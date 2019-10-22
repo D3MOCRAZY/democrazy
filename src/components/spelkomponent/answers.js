@@ -8,15 +8,20 @@ class GetAnswers extends React.Component{
   render(){
     if(this.props.gameOn){
       return (
-        this.props.colors[this.props.iteration].map((cell, index) => {
-          return <button
-                    key={index + cell}
-                    index={cell}
-                    onClick={(e) => {this.props.updateAll(e)}}
-                    >
-                    {this.props.answers[index]}
-                  </button>
-        })
+        <section className="answers-box">
+            {
+              this.props.colors[this.props.iteration].map((cell, index) => {
+                return (<button
+                          className="answer-items"
+                          key={index + cell}
+                          index={cell}
+                          onClick={(e) => {this.props.updateAll(e)}}
+                          >
+                          {this.props.answers[index]}
+                        </button>)
+              })
+            }
+        </section>
       );
     }
   }

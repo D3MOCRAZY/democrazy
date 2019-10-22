@@ -6,6 +6,10 @@ html,body{
   padding: 0.5rem;
   background-color: #fff;
   height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
 hr {
   padding: 0;
@@ -16,6 +20,7 @@ button{
   padding: 0;
   background-color: white;
   font-size: 100%;
+  cursor: pointer;
 }
 
 /* Page Structure CSS */
@@ -25,6 +30,7 @@ button{
 .App{
   height: 100%;
 }
+
 .header{
   display: flex;
   align-items: center;
@@ -52,9 +58,9 @@ button{
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  font-size: 1.5rem;
 }
 .menuBtn{
-  border-radius:
 }
 @keyframes dropAnim {
   0%{
@@ -75,7 +81,8 @@ button{
 .drp-btn{
   background-color: #ccc;
   width: 100%;
-  line-height: 1.6;
+  line-height: 2.4;
+  font-size: 1rem;
   cursor: pointer;
 }
 /* Elements inside the Main-class */
@@ -91,16 +98,41 @@ button{
 
 /* Elements inside the Game-box */
 .game-before-start{
-  height: 100%;
+  height: 80%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
+.game-before-start-inner{
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.intro-text{
+  font-size: 2rem;
+}
 .game-after-start{
-  height: 100%;
+  height: 80%;
   width: 100%;
-  display:block;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.answers-box{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap:wrap;
+}
+.answer-items{
+  margin: 0.4rem;
 }
 .startButton{
   position:relative;
@@ -113,34 +145,8 @@ button{
 }
 
 /* STARTBUTTON EFFECT */
-@keyframes StrBtn {
-  0%{
-    padding: 0px;
-    border: 10px solid #eee;
-  }
-  100%{
-    padding: 20px;
-    border: 10px solid #ccc;
-  }
-}
-.startButton:hover{
-  animation: StrBtn 500ms forwards;
-}
-.startButton:active{
-  animation: StrBtn 1s forwards;
-  animation-direction: reverse;
-}
+
 /* ResultScreen */
-.result-box{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border: 0.1rem solid #ccc;
-  border-radius: 2px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-}
 .column-placeholder{
   display: flex;
   flex-direction: row;
@@ -149,13 +155,17 @@ button{
   width: 50%;
   height: 50%;
   align-items: flex-end;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
 }
-/* Column animation */
+/* Result percentage Column animation */
+
+/* TODO: Implement loading animation  */
 
 .col{
   width: 10%;
   margin: 10px;
-
+  margin-bottom: 0;
   transition: all 500ms;
 }
 

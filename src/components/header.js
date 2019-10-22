@@ -9,7 +9,7 @@ export default class Header extends React.Component {
     this.state = {
       showMenu: false,
       show: this.showMenu.bind(this),
-      menuMsg: 'Show Menu'
+      menuMsg: '🖸 Menu'
     }
     // this.showMenu = this.showMenu.bind(this);
     // this.closeMenu = this.closeMenu.bind(this);
@@ -20,7 +20,7 @@ export default class Header extends React.Component {
       return {
         showMenu: true,
         show: this.closeMenu.bind(this),
-        menuMsg: 'Close Menu'
+        menuMsg: '🗶 Menu'
       }
     });
   }
@@ -29,7 +29,7 @@ export default class Header extends React.Component {
     this.setState({
       showMenu: false,
       show: this.showMenu.bind(this),
-      menuMsg: 'Show Menu'
+      menuMsg: '🖸 Menu'
      });
   }
   render() {
