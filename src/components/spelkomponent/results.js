@@ -6,10 +6,10 @@ class Results extends React.Component{
   constructor(){
     super()
     this.cssColors = [
-      'blue',
-      'red',
-      'green',
-      'brown'
+      '#0923f4',
+      '#c11010',
+      '#178e17',
+      '#992e2e'
     ];
   }
   render(){
@@ -17,7 +17,7 @@ class Results extends React.Component{
       <GameConsumer>
         {(({ userAnswers, partyColors, userColorAffiliation, userAnswersPercentage }) =>
         <>
-          <p>Du har mest samhörighet med {userColorAffiliation} politik</p>
+          <h2 className="questions">Du har mest samhörighet med {userColorAffiliation} politik</h2>
           <article className="column-placeholder">
             {
               userAnswers.map((amount, index) => {
