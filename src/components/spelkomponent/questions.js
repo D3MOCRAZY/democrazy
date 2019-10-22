@@ -16,7 +16,7 @@ class Questions extends React.Component{
       <GameConsumer>
         {({ questions, iteration }) => (
           <>
-            <h2>{ questions[iteration] }</h2>
+            <h2 className="questions">{ questions[iteration] }</h2>
           </>
         )}
       </GameConsumer>

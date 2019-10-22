@@ -16,7 +16,7 @@ body {
 
 
 div[class*=box] {
-    width: 30%; 
+    width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,23 +39,24 @@ html,body{
   text-rendering: optimizeLegibility;
   text-shadow: rgba(0,0,0,.01) 0 0 1px;
   font-family:Arial, Helvetica, sans-serif;
-
-  
+  background-image:  url('./assets/demokrati-2.jpg');
+  background-size:  cover;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 .startButton {
   color: #FFF;
   transition: all 0.5s;
-  position: relative; 
-
-
+  position: relative;
+  overflow: hidden;
 }
 .startButton span {
-  z-index: 2; 
+  z-index: 2;
   display: block;
   position: absolute;
   width: 100%;
-  height: 100%; 
- 
+  height: 100%;
+
 }
 .startButton::before {
   content: '';
@@ -65,6 +66,7 @@ html,body{
   width: 100%;
   height: 100%;
   z-index: 1;
+  border-radius: 10px;
   transition: all 0.5s;
   border: 1px solid rgba(255,255,255,0.2);
   background-color: rgba(255,255,255,0.1);
@@ -74,6 +76,7 @@ html,body{
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 10px;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -95,8 +98,6 @@ hr {
 button{
   border: 10px;
   padding: 10px;
-  font-size: 100%;
-  background-color: #A119E0;
   line-height: 10px;
   text-align: center;
   cursor: pointer;
@@ -114,7 +115,7 @@ button{
   display: flex;
   justify-content: space-between;
   height: 11%;
- 
+
 }
 .main{
   height: 80%;
@@ -133,7 +134,7 @@ button{
   text-align: center;
   padding:10px;
 
-  
+
 }
 
 /* Elements inside the Header-class */
@@ -144,18 +145,19 @@ button{
   padding: 3px;
   height: 20px;
   border-radius: 10px;
-
 }
 .menu{
-  font-size: 25px;
   height: 5%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   font-size: 1.5rem;
+  border-radius: 10px;
+}
+.menu-inner{
+  border-radius: 10px;
 }
 .menuBtn{
+  background-color:#A1E2AC;
+  border-radius: 10px;
 }
 @keyframes dropAnim {
   0%{
@@ -176,9 +178,10 @@ button{
 .drp-btn{
   background-color: #ccc;
   width: 100%;
-  line-height: 2.4;
+  line-height: 1.3;
   font-size: 1rem;
   cursor: pointer;
+  border-radius:10px;
 }
 /* Elements inside the Main-class */
 .game-box{
@@ -192,6 +195,11 @@ button{
 
 
 /* Elements inside the Game-box */
+.questions{
+  background-color:#A1E2AC;
+  text-align: center;
+  border-radius: 10px;
+}
 .game-before-start{
   height: 80%;
   width: 100%;
@@ -208,7 +216,10 @@ button{
   align-items: center;
 }
 .intro-text{
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  width:50%;
+  content: url(../src/democrazy_logo-RGB.png);
+
 }
 .game-after-start{
   height: 80%;
@@ -233,7 +244,6 @@ button{
 .startButton{
   position:relative;
   display:block;
-  width:  100px;
   background-color:#A119E0;
   border-radius: 0.1rem;
   box-sizing: content-box;
@@ -241,9 +251,7 @@ button{
   border-radius: 10px;
   font-weight: 900;
   color: #fff;
-  padding: 10px;
-  height: 10px;
- 
+  padding: 0.6rem;
 }
 
 
@@ -259,8 +267,8 @@ button{
   width: 50%;
   height: 50%;
   align-items: flex-end;
-  border-bottom: 1px solid #ccc;
-  border-left: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  border-left: 2px solid #ccc;
 }
 /* Result percentage Column animation */
 
@@ -270,6 +278,7 @@ button{
   width: 10%;
   margin: 10px;
   margin-bottom: 0;
+  border-radius: 10px 10px 0px 0px;
   transition: all 500ms;
 }
 

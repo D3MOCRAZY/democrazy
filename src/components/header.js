@@ -9,10 +9,8 @@ export default class Header extends React.Component {
     this.state = {
       showMenu: false,
       show: this.showMenu.bind(this),
-      menuMsg: '🖸 Menu'
+      menuMsg: '🖸'
     }
-    // this.showMenu = this.showMenu.bind(this);
-    // this.closeMenu = this.closeMenu.bind(this);
   }
 
   showMenu() {
@@ -20,7 +18,7 @@ export default class Header extends React.Component {
       return {
         showMenu: true,
         show: this.closeMenu.bind(this),
-        menuMsg: '🗶 Menu'
+        menuMsg: '🗶'
       }
     });
   }
@@ -29,7 +27,7 @@ export default class Header extends React.Component {
     this.setState({
       showMenu: false,
       show: this.showMenu.bind(this),
-      menuMsg: '🖸 Menu'
+      menuMsg: '🖸'
      });
   }
   render() {
@@ -44,7 +42,7 @@ export default class Header extends React.Component {
            </div>
           </div>
           <section className="menu">
-            <div>
+            <div className="menu-inner">
               <button className="menuBtn" onClick={this.state.show}>
                 {this.state.menuMsg}
               </button>
@@ -54,12 +52,10 @@ export default class Header extends React.Component {
               this.state.showMenu
                 ? (
                   <div className="dropdown" >
-                    <hr />
                     <button className="drp-btn">
                       Om oss
                     </button>
-                    <hr />
-                    <button className="drp-btn">
+                    <button className=" drp-btn">
                       Hjälp
                     </button>
                   </div>

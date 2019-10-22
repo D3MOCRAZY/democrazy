@@ -12,7 +12,7 @@ class GetAnswers extends React.Component{
             {
               this.props.colors[this.props.iteration].map((cell, index) => {
                 return (<button
-                          className="answer-items"
+                          className="answer-items startButton"
                           key={index + cell}
                           index={cell}
                           onClick={(e) => {this.props.updateAll(e)}}
