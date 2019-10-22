@@ -85,7 +85,10 @@ transform: rotate(-45deg);
 transform: rotate(45deg);
 
 }
-
+hr {
+  padding: 0;
+  margin: 0;
+}
 button{
   border: 10px;
   padding: 10px;
@@ -143,8 +146,37 @@ button{
 }
 .menu{
   font-size: 25px;
+  height: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.menuBtn{
+  border-radius:
+}
+@keyframes dropAnim {
+  0%{
+    height: 0%;
+    color: white;
+    opacity: 0;
+  }
+  100%{
+    height: 100%;
+    opacity: 1;
+  }
+}
+.dropdown{
+  animation: dropAnim 500ms ease;
+  width: 100%;
 }
 
+.drp-btn{
+  background-color: #ccc;
+  width: 100%;
+  line-height: 1.6;
+  cursor: pointer;
+}
 /* Elements inside the Main-class */
 .game-box{
   position: relative;
@@ -154,6 +186,7 @@ button{
   border-radius: 10px;
   text-align: center;
 }
+
 
 /* Elements inside the Game-box */
 .game-before-start{
@@ -197,12 +230,46 @@ button{
     border: 10px solid #ccc;
   }
 }
-/****
-.startButton:hover{
-  animation: StrBtn 500ms forwards;
+
+/* ResultScreen */
+.result-box{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 0.1rem solid #ccc;
+  border-radius: 2px;
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
-.startButton:active{
-  animation: StrBtn 1s forwards;
-  animation-direction: reverse;
+
+.column-placeholder{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  width: 50%;
+  height: 50%;
+  align-items: flex-end;
 }
-*/
+/* Column animation */
+
+.col{
+  width: 10%;
+  margin: 10px;
+
+  transition: all 500ms;
+}
+
+.col-1{
+
+}
+.col-2{
+
+}
+.col-3{
+
+}
+.col-4{
+
+}

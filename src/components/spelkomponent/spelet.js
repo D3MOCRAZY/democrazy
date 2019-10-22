@@ -2,6 +2,9 @@ import React from 'react';
 // import { Theme } from './theme.js';
 import { Questions } from './questions.js';
 import { Answers } from './answers.js';
+import { Results } from './results.js';
+
+import { GameProvider } from '../../context/context.js';
 
 export default class Game extends React.Component{
 
@@ -9,48 +12,69 @@ export default class Game extends React.Component{
       super();
       this.state = {
         gameStarted: false,
-        question: {q: 'fråga1'},
-        answers: 'BORDE VARA EN ARRAY?',
-        theme: 'BORDE VARA EN ARRAY?',
+        gameWillEnd: false,
+        gameEnded: false,
       };
-      this.startGame = this.startGame.bind(this);
-      this.userHasAnswered = this.userHasAnswered.bind(this);
+      this.endGame = this.endGame.bind(this);
     }
+
 
     startGame(){
-      this.setState((state) => ({
-        gameStarted: !state.gameStarted,
-      }));
-      console.log(this.state.gameStarted);
-    }
-    userHasAnswered(){
+      //Flippar till starten av spelet
       this.setState((state) => {
-        return{
-          question: {q: 'fråga 2'}
+        return {
+          gameStarted: !state.gameStarted
         }
-      })
+      });
+
     }
+
+    endGame(){
+      //Flippar läge till slutet av spelet
+      console.log('Switching to result screen')
+      this.setState((state) => {
+        return {
+            gameEnded: !state.gameEnded,
+        }
+      });
+
+    }
+
     render(){
       return (
-        <section className="game-box">
+      <GameProvider>
+          <section className={this.state.gameEnded ? 'result-box': 'game-box'}>
 
-          <article className={`${this.state.gameStarted ? 'game-after-start'  : 'game-before-start' }`}>
             {
 
-              this.state.gameStarted ?
+              this.state.gameEnded
 
-                  <>
-                    <Questions question={this.state.question} />
-                    <Answers answer={this.userHasAnswered} />
-                  </>
+                ?
 
-              :
+                <Results  />
+
+                :
+
+                <article className={`${this.state.gameStarted ? 'game-after-start'  : 'game-before-start' }`}>
+
+                    {
+                      this.state.gameStarted ?
+
+                          <>
+                            <Questions />
+                            <Answers gameEnded={this.state.gameEnded} endGame={this.endGame}/>
+                          </>
+
+                      :
+                      <button className="startButton" onClick={(e) => {this.startGame(e)}}>Start Game</button>
+                    }
 
               <button className="startButton" onClick={(e) => {this.startGame(e)}}><span>:PLAY</span></button>
-              
+             
+                </article>
             }
-          </article>
-        </section>
+          </section>
+      </GameProvider>
       )
     }
 
