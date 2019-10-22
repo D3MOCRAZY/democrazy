@@ -72,6 +72,8 @@ export default class Game extends React.Component{
                       </section>
                   }
 
+              <button className="startButton" onClick={(e) => {this.startGame(e)}}><span>:PLAY</span></button>
+             
                 </article>
             }
           </section>

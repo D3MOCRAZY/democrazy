@@ -12,7 +12,10 @@ export default class Footer extends React.Component{
       return (
         <>
           <footer className="footer">
-          inside footer
+            
+          © 2019 Copyright:
+    Democrazy.com
+    <i class="fab fa-instagram"></i>
           </footer>
         </>
       )
