@@ -38,13 +38,14 @@ export default class Header extends React.Component {
         <header className="header">
 
           <div className="logo">
-            <div><a href="/">The logo</a></div>
+            <p></p>
+           
           </div>
 
 
           <div className="menu1">
             <button onClick={this.showMenu}>
-              Show menu</button>
+              Menu</button>
           </div>
 
           {
