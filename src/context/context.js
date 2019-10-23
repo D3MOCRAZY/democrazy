@@ -77,7 +77,7 @@ class GameProvider extends React.Component{
     var tempArr = [0,0,0,0];
     //((input - min) * 100) / (max - min)
     this.state.userAnswers.forEach((amount, index) => {
-        let AmountInPercentage = Math.floor((amount * 100) / combinedVal);
+        let AmountInPercentage = Math.floor((amount / this.state.questions.length) * 100);
         tempArr[index] = AmountInPercentage;
     });
 
