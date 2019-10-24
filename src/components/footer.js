@@ -15,7 +15,7 @@ export default class Footer extends React.Component{
             
           © 2019 Copyright:
     Democrazy.com
-    <i class="fab fa-instagram"></i>
+    
           </footer>
         </>
       )
