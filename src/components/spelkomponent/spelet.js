@@ -68,7 +68,7 @@ export default class Game extends React.Component{
                       :
                       <section className="game-before-start-inner">
                         <p className="intro-text"></p>
-                        <button className="startButton" onClick={(e) => {this.startGame(e)}}>:PLAY</button>
+                        <button className="startButton" onClick={(e) => {this.startGame(e)}}>:PLAY NOW!</button>
                       </section>
                   }
                 </article>

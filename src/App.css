@@ -173,15 +173,21 @@ button{
 .dropdown{
   animation: dropAnim 500ms ease;
   width: 100%;
+
 }
 
 .drp-btn{
-  background-color: #ccc;
   width: 100%;
   line-height: 1.3;
   font-size: 1rem;
   cursor: pointer;
   border-radius:10px;
+  background-color: #A3C8D6;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+.drp-btn:hover{
+  opacity: 1;
 }
 /* Elements inside the Main-class */
 .game-box{
@@ -217,8 +223,11 @@ button{
 }
 .intro-text{
   /* font-size: 2rem; */
+  margin-top:-100px;
   width:50%;
   content: url(../src/democrazy_logo-RGB.png);
+
+ 
 
 }
 .game-after-start{
@@ -252,6 +261,7 @@ button{
   font-weight: 900;
   color: #fff;
   padding: 0.6rem;
+  top: 25px;
 }
 
 
@@ -280,17 +290,9 @@ button{
   margin-bottom: 0;
   border-radius: 10px 10px 0px 0px;
   transition: all 500ms;
-}
-
-.col-1{
+  margin-left:6em;
 
 }
-.col-2{
 
-}
-.col-3{
 
-}
-.col-4{
 
-}

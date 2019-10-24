@@ -46,7 +46,7 @@
 
   ],
 
-  "answers": ["instämmer helt", "instämmer delvis", "delvis emot", "helt emot", "ingen åsikt"],
+  "answers": [":instämmer helt", ":instämmer delvis", ":delvis emot", ":helt emot", ":ingen åsikt"],
 
   "colors": [
 
